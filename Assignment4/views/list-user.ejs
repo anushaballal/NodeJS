@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="<%= path==='/' ? 'active' : '' %>" href="/">Home</a></li>
+                <li><a class="<%= path==='/users' ? 'active' : '' %>" href="/">User List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <% if(users.length > 0) { %>
+            <div>
+                <ul>
+                    <% for(let user of users) { %>
+                        <li>
+                            <%= user.name %>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        <% } else { %>
+            <h1>No User Names Found</h1>
+        <% } %>
+    </main>
+</body>
+</html>

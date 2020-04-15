@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=pageTitle%></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="<%= path==='/' ? 'active' : '' %>" href="/">Home</a></li>
+                <li><a class="<%= path==='/users' ? 'active' : '' %>" href="/users">User List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="POST">
+            <div>
+                <label for="name">Enter Name:</label>
+                <input type="text" name="name">
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </main>
+</body>
+</html>
